@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Adine | Tugas JS</title>
+</head>
+<body>
+
+	<button onclick="document.getElementById('dewa').innerHTML='Bejita Donk'">Goku vs Vegeta kalo tarung siapa yang menang?</button>
+
+	<p id="dewa"></p>
+	<br>
+
+	<button onclick="this.innerHTML='KUCING, Tukan Jadi Kucing.'">"KA... ME.. HA.. ME.. HAAa....." Jangan di pencet! klo di pencet berubah jadi Kucing. </button>
+
+	<h2 onmouseover="this.innerHTML='MOSnya Ilang, wek'">Mosnya jangan kesini, Nanti ilang loh.</h2>
+
+	<h2 onmouseout="this.innerHTML='Dumpak nining Jozz'">Entah Apa Yang Merusakki mu.</h2>
+
+	<input onkeydown="alert('Alay bet dah')" value="pencet! klo di pencet">
+
+	<h2 onload="this.innerHTML='MOSnya Ilang, wek'">Mosnya jangan kesini, Nanti ilang loh.</h2>
+
+	<input onchange="alert('Alay bet dah2')" value="pencet! klo di pencet"> <input type="submit">
+
+	<h3>Contoh methoh length</h3>
+	<p id="panjang"></p>
+	<br>
+
+	<h3>Contoh methot IndexOf</h3>
+	<p id="indexx"></p>
+	<br>
+
+	<h3>Contoh methot LastIndexOf</h3>
+	<p id="lio"></p>
+	<br>
+
+	<h3>Contoh methot LastIndexOf mengembalikan -1</h3>
+	<p id="liomin"></p>
+	<br>
+
+	<h3>Contoh methot LastIndexOf dengan hitungan awal telah di tentukan</h3>
+	<p id="minlio"></p>
+	<br>
+
+	<h3>Contoh methot Search</h3>
+	<p id="minlio2"></p>
+	<br>
+
+	<h3>Contoh methot Slice</h3>
+	<p id="minlio3"></p>
+	<br>
+
+	<h3>Masih Contoh methot Slice</h3>
+	<p id="minlio4"></p>
+	<br>
+
+	<h3>Masih Contoh methot Slice</h3>
+	<p id="minlio5"></p>
+	<br>
+
+	<h3>Contoh methot substring</h3>
+	<p id="cokolatos"></p>
+	<br>
+
+	<h3>Contoh methot substr</h3>
+	<p id="cokolatos1"></p>
+	<br>
+
+	<h3>Masih Contoh methot substr</h3>
+	<p id="cokolatos2"></p>
+	<br>
+
+	<h3>Masih Lagi Contoh methot substr</h3>
+	<p id="cokolatos3"></p>
+	<br>
+
+	<h3>Contoh methot Replace pakek tombol</h3>
+	<button onclick="gery()">Di Klick Gan!</button><br>
+	<p id="salut">Berubah menjadi Supermen</p>
+
+	<h3>Masih Contoh methot Replace pakek tombol</h3>
+	<button onclick="gery2()">Di Klick Boy!</button><br>
+	<p id="salut2">Berubah menjadi Bernekelboy dan Bernekelboy</p>
+
+	<h3>Lagi Masih Contoh methot Replace pakek tombol</h3>
+	<button onclick="gery3()">Di Klick Bang!</button><br>
+	<p id="salut3">Berubah menjadi Bernadber</p>
+
+	<h3>Lagi Masih Contoh methot Replace pakek tombol</h3>
+	<button onclick="gery4()">Di Klick Bang!</button><br>
+	<p id="salut4">Berubah menjadi Bernadber dan Bernadber lagi.</p>
+
+	<h3>Contoh methot to Upper Case</h3>
+	<p id="nata1"></p>
+	<br>
+
+	<h3>Contoh Kebalikannya methot to Upper Case</h3>
+	<p id="nata2"></p>
+	<br>
+
+	<h3>Contoh Kebalikannya methot to Upper Case</h3>
+	<p id="nata3"></p>
+	<br>
+
+	<h3>Contoh methot trim</h3>
+	<p id="nata4"></p>
+	<br>
+
+	<h3>Contoh methot CharAt</h3>
+	<p id="nata5"></p>
+	<br>
+
+	<h3>Contoh methot split</h3>
+	<button onclick="koki()">Di Klick Gan!</button><br>
+	<p id="kiko"></p>
+
+	<script>
+		var angka = "1234567890";
+
+		document.getElementById("panjang").innerHTML = angka.length;
+
+		var index = "Adine Pamungkas Is Awesome";
+		var inden = index.indexOf("Pamungkas");
+		document.getElementById("indexx").innerHTML = inden;
+
+		var indent = index.lastIndexOf("Is");
+		document.getElementById("lio").innerHTML = indent;
+
+		var indens = index.lastIndexOf("Paijo");
+		document.getElementById("liomin").innerHTML = indens;
+
+		var str = "Adi adalah seorang adalah dia";
+		var pos = str.indexOf("adalah",15);
+		document.getElementById("minlio").innerHTML = pos;
+
+		var pos2 = str.search("adalah");
+		document.getElementById("minlio2").innerHTML = pos2;
+
+		var pos3 = str.slice(15,20);
+		document.getElementById("minlio3").innerHTML = pos3;
+
+		var pos4 = str.slice(15);
+		document.getElementById("minlio4").innerHTML = pos4;
+
+		var pos5 = str.slice(-5);
+		document.getElementById("minlio5").innerHTML = pos5;
+
+		var sub = str.substring(3,7);
+		document.getElementById('cokolatos').innerHTML = sub;
+
+		var sub = str.substr(3,7);
+		document.getElementById('cokolatos1').innerHTML = sub;
+
+		var sub = str.substr(3);
+		document.getElementById('cokolatos2').innerHTML = sub;
+
+		var sub = str.substr(-3);
+		document.getElementById('cokolatos3').innerHTML = sub;
+
+		function gery() {
+		  var strr = document.getElementById("salut").innerHTML; 
+		  var txtx = strr.replace("Supermen","Mermetmen");
+		  document.getElementById("salut").innerHTML = txtx;
+		}
+
+		function gery2() {
+		  var strrr = document.getElementById("salut2").innerHTML; 
+		  var txtxt = strrr.replace("Bernekelboy","SquidMagma");
+		  document.getElementById("salut2").innerHTML = txtxt;
+		}
+
+		function gery3() {
+		  var strrrr = document.getElementById("salut3").innerHTML; 
+		  var txtxtx = strrrr.replace(/BERNADBER/i,"Oscar Oasis");
+		  document.getElementById("salut3").innerHTML = txtxtx;
+		}
+
+		function gery4() {
+		  var strrrr1 = document.getElementById("salut4").innerHTML; 
+		  var txtxtx1 = strrrr1.replace(/Bernadber/g,"Oscar-Oasis");
+		  document.getElementById("salut4").innerHTML = txtxtx1;
+		}
+
+		var oky = "Adi adalah seorang adalah dia";
+		var jelly = oky.toUpperCase();
+		document.getElementById("nata1").innerHTML = jelly;
+
+		var jelly2 = oky.toLowerCase();
+		document.getElementById("nata2").innerHTML = jelly2;
+
+		var text1 = "Hello";
+		var text2 = "Bambang!";
+		var text3 = text1.concat(" ",text2);
+		document.getElementById("nata3").innerHTML = text3;
+
+		var tulis = "      JONO     ";
+		var asli = tulis.trim();
+		document.getElementById("nata4").innerHTML = asli;
+
+		var asli1 = oky.charAt(2);
+		document.getElementById("nata5").innerHTML = asli1;
+
+		var asli2 = oky[1];
+		document.getElementById("nata5").innerHTML = asli2;
+
+		function koki() {
+		  var stra = "1 2 3 4 45 56";
+		  var arr = stra.split(" ");
+		  document.getElementById("kiko").innerHTML = arr[0];
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

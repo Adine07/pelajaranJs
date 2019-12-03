@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Adine | Tugas</title>
+</head>
+<body>
+
+	<h2>Hitung Luas Segitiga</h2>
+
+	<label>
+		Alas
+		<input type="number" id="alas">
+	</label>
+	<label>
+		Tinggi
+		<input type="number" id="tinggi">
+	</label>
+	<button onclick="luassgt()">Hasil</button>
+	<br><br>
+	Luas Segitiga = <span id="luassgt"></span>
+
+	<hr>
+
+	<h2>Hitung Luas Layang-layang</h2>
+
+	<label>
+		Diagunal 1
+		<input type="number" id="dg1">
+	</label>
+	<label>
+		Diagonal 2
+		<input type="number" id="dg2">
+	</label>
+	<button onclick="luaslyly()">Hasil</button>
+	<br><br>
+	Luas Layang-layang = <span id="luaslyly"></span>
+
+	<hr>
+
+	<h2>Hitung Luas Lingkaran</h2>
+
+	<label>
+		Jari-jari Lingkaran
+		<input type="number" id="jrjr">
+	</label>
+	<button onclick="luasling()">Hasil</button>
+	<br><br>
+	Luas Lingkaran = <span id="luasling"></span>
+
+
+	<script>
+		
+		function luassgt(){
+
+			var alas = document.getElementById('alas').value;
+			var tinggi = document.getElementById('tinggi').value;
+			var hasilsgt = 0.5 * (alas * tinggi);
+			document.getElementById('luassgt').innerHTML = hasilsgt;
+		}
+
+		function luaslyly(){
+
+			var dg1 = document.getElementById('dg1').value;
+			var dg2 = document.getElementById('dg2').value;
+			var hasillyly = (dg1 * dg2) / 2;
+			document.getElementById('luaslyly').innerHTML = hasillyly;
+		}
+
+		function luasling(){
+
+			var jrjr = document.getElementById('jrjr').value;
+			var hasilling = 3.14 * (jrjr * jrjr) ;
+			document.getElementById('luasling').innerHTML = hasilling;
+		}
+
+	</script>
+	
+</body>
+</html>

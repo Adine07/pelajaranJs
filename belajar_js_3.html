@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Adine | JS</title>
+    </head>
+    <body>
+    
+        <input id="angka1" type="number">
+        +
+        <input id="angka2" type="number">
+        =
+        <span id="hasil"></span>
+        <br><br>
+        
+        <button onclick="jumlah()">Jumlahkan</button>
+        
+        
+        <script>
+            function jumlah(){
+                
+                var angka1 = document.getElementById('angka1').value;
+                
+                var angka2 = document.getElementById('angka2').value;
+                
+                var result = parseInt(angka1) + parseInt(angka2);
+                
+                document.getElementById('hasil').innerHTML = result;
+                
+            }
+        </script>
+    
+    
+    </body>
+</html>

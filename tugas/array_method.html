@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Adine | JS</title>
+</head>
+<body>
+	
+	<h1>Array Method</h1>
+
+	<h2>Convert Array to String</h2>
+	<h3>toString</h3>
+	<p id="ts1"></p>
+	<h3>Join</h3>
+	<p id="ts2"></p>
+
+	<h2>Popping and Pushing</h2>
+	<h3>Popping</h3>
+	<p id="pp1"></p>
+	<p id="pp2"></p>
+	<h3>Pushing</h3>
+	<p id="pp3"></p>
+	<p id="pp4"></p>
+
+	<h2>String Element</h2>
+	<h3>Shift</h3>
+	<p id="se1"></p>
+	<p id="se2"></p>
+	<h3>UnShift</h3>
+	<p id="se3"></p>
+
+	<h2>Changing Elements</h2>
+	<h3>Index 0</h3>
+	<p id="ce1"></p>
+	<p id="ce2"></p>
+	<h3>Lenght</h3>
+	<p id="ce3"></p>
+
+	<h2>Deleting Elements</h2>
+	<h3>Delete</h3>
+	<p id="de1"></p>
+	<p id="de2"></p>
+
+	<h2>Splicing an Array</h2>
+	<h3>Splice</h3>
+	<p id="saa1"></p>
+	<h3>Splice()</h3>
+	<p id="saa2"></p>
+
+	<h2>Merging (Concatenating) Arrays</h2>
+	<h3>concat 2 aray</h3>
+	<p id="mc1"></p>
+	<h3>concat >2 aray</h3>
+	<p id="mc2"></p>
+
+	<h2>Slicing an Array</h2>
+	<h3>slice</h3>
+	<p id="saa"></p>
+
+
+
+	<script>
+		var hewan = ["Buaya", "Orang utan", "Angsa", "Manuk"];
+		document.getElementById("ts1").innerHTML = hewan.toString();
+
+		document.getElementById("ts2").innerHTML = hewan.join(" * ");
+
+		document.getElementById("pp1").innerHTML = hewan;
+		hewan.pop();
+		document.getElementById("pp2").innerHTML = hewan;
+		document.getElementById("pp3").innerHTML = hewan;
+		hewan.push("Kochen-Oren");
+		document.getElementById("pp4").innerHTML = hewan;
+		document.getElementById("se1").innerHTML = hewan;
+		hewan.shift();
+		document.getElementById("se2").innerHTML = hewan;
+		hewan.unshift("Kangaro");
+		document.getElementById("se3").innerHTML = hewan;
+		document.getElementById("ce1").innerHTML = hewan;
+		hewan[0] = "Sapi";
+		document.getElementById("ce2").innerHTML = hewan;
+		hewan[hewan.length] = "Kebo";
+		document.getElementById("ce3").innerHTML = hewan;
+		document.getElementById("de1").innerHTML = hewan;
+		delete hewan[0];
+		document.getElementById("de2").innerHTML = hewan;
+		hewan.splice(0, 0, "Jangkrik", "Godzilla");
+		document.getElementById("saa1").innerHTML = hewan;
+		hewan.splice(2, 1);
+		document.getElementById("saa2").innerHTML = hewan;
+		var sayur = ["wortel","sawi","bayam"];
+		var buah = ["semangka","Blewah"]
+		var campur = hewan.concat(sayur);
+		document.getElementById("mc1").innerHTML = campur;
+		var campur2 = hewan.concat(sayur,buah);
+		document.getElementById("mc2").innerHTML = campur2;
+		var ciprut = campur.slice(1,3);
+document.getElementById("saa").innerHTML = campur + "<br><br>" + ciprut;
+	</script>
+</body>
+</html>

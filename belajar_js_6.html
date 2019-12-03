@@ -1,0 +1,29 @@
+<script>
+	
+	var angka = [32 ,23 , 33, 22, 232,323];
+	
+	
+	// method ForEach
+	angka.forEach(function(value) {
+		document.write(value);
+		document.write("<br>");
+	});
+	
+	document.write("<br>");
+	
+	var contoh_map = angka.map( function(val){
+		return val + 5;
+	});
+	
+	// method Map
+	document.write( contoh_map );
+	
+	document.write("<br>");
+	
+	var contoh_filter = angka.filter( function(v){
+		return v > 32;
+	});
+	
+	document.write(contoh_filter);
+	
+</script>

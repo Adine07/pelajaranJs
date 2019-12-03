@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Adine | JS 4</title>
+    </head>
+    <body>
+        
+        <script>
+            function luas_segitiga(alas, tinggi, satuan){
+
+                var hasil = alas * tinggi / 2;
+                
+                return hasil + satuan;
+            }
+            
+            document.write( luas_segitiga(20, 50, "cm") );
+            document.write( "<br>" );
+            document.write( luas_segitiga(209, 50, "km") );
+            document.write( "<br>" );
+            
+        </script>
+        
+        <script>
+            function luassegitiga(alas, tinggi = 0, satuan = "m" ){
+                var hasil = alas * tinggi /2;
+                
+                return hasil + satuan;
+            }
+            
+            document.write( luassegitiga(20, 77,) );
+            document.write( "<br>" );
+            document.write( luas_segitiga(2409, 50, "km") );
+            
+        </script>
+
+    </body>
+</html>
